@@ -68,7 +68,7 @@ TEMPLATES = [
         },
     },
 ]
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 WSGI_APPLICATION = "myproject.wsgi.application"
 
 
