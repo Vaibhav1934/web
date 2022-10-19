@@ -111,7 +111,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = "/static/"
+STATIC_HOST = os.environ.get("DJANGO_STATIC_HOST", "")
+STATIC_URL = STATIC_HOST + "/static/"
+#STATIC_URL = "/static/"
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
 
 # Default primary key field type
@@ -119,5 +121,4 @@ STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 #CRISPY_TEMPLATE_PACK = 'bootstrap4'
-#STATIC_HOST = os.environ.get("DJANGO_STATIC_HOST", "")
-#STATIC_URL = STATIC_HOST + "/static/"
+
